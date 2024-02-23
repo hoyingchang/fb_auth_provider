@@ -26,7 +26,6 @@ class SigninState extends Equatable {
   }
 
   @override
-  // TODO: implement props
   List<Object?> get props => [
         signinStatus,
         error,

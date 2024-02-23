@@ -16,11 +16,11 @@ class SplashPage extends StatelessWidget {
     final authState = context.watch<AuthProvider>().state;
 
     if (authState.authStatus == AuthStatus.authenticated) {
-      WidgetsBinding.instance!.addPostFrameCallback((_) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
         Navigator.pushNamed(context, HomePage.routeName);
       });
     } else if (authState.authStatus == AuthStatus.unauthenticated) {
-      WidgetsBinding.instance!.addPostFrameCallback((_) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
         Navigator.pushNamed(context, SigninPage.routeName);
       });
     }

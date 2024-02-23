@@ -20,7 +20,7 @@ class ProfileState extends Equatable {
     required this.error,
   });
 
-  factory ProfileState.initial(){
+  factory ProfileState.initial() {
     return ProfileState(
       profileStatus: ProfileStatus.initial,
       user: User.initialUser(),
@@ -29,7 +29,6 @@ class ProfileState extends Equatable {
   }
 
   @override
-  // TODO: implement props
   List<Object?> get props => [profileStatus, user, error];
 
   @override

@@ -17,7 +17,6 @@ class _ProfilePageState extends State<ProfilePage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     profileProv = context.read<ProfileProvider>();
     profileProv.addListener(errorDialogListener);
@@ -26,7 +25,7 @@ class _ProfilePageState extends State<ProfilePage> {
 
   void _getProfile() {
     final String uid = context.read<fbAuth.User?>()!.uid;
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       context.read<ProfileProvider>().getProfile(uid: uid);
     });
   }
